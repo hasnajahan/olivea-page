@@ -1,0 +1,235 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    min-height: 88px;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: rgba(247, 246, 238, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(83, 100, 64, 0.16);
+    box-shadow: 0 3px 15px rgba(53, 63, 37, 0.05);
+}
+
+.brand {
+    color: #354326;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand:hover {
+    color: #68764d;
+}
+
+.site-header .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.site-header .header-nav a {
+    position: relative;
+    color: #414b35;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.site-header .header-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background-color: #68764d;
+    transition: width 0.3s ease;
+}
+
+.site-header .header-nav a:hover {
+    color: #78865a;
+}
+
+.site-header .header-nav a:hover::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 205px;
+    padding: 10px 13px;
+    background-color: #eeeee4;
+    border: 1px solid rgba(83, 100, 64, 0.18);
+    border-radius: 3px;
+    color: #536440;
+}
+
+.header-search:focus-within {
+    border-color: #7b8960;
+    background-color: #f5f5ed;
+}
+
+.header-search input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #414b35;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.header-search input::placeholder {
+    color: #929783;
+}
+
+.luxury-cart {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #414b35;
+    text-decoration: none;
+}
+
+.luxury-cart:hover {
+    color: #78865a;
+}
+
+.cart-count {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #536440;
+    color: #fffdf6;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+@media (max-width: 1050px) {
+    .site-header {
+        padding: 18px 4%;
+        gap: 20px;
+    }
+
+    .site-header .header-nav {
+        gap: 18px;
+    }
+
+    .header-actions {
+        gap: 18px;
+    }
+
+    .header-search {
+        width: 175px;
+    }
+}
+
+@media (max-width: 800px) {
+    .site-header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 17px 5%;
+    }
+
+    .brand {
+        font-size: 25px;
+    }
+
+    .site-header .header-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 35px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(83, 100, 64, 0.14);
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .site-header {
+        min-height: auto;
+        padding: 15px 5%;
+        gap: 16px;
+    }
+
+    .brand {
+        font-size: 23px;
+        letter-spacing: 3px;
+    }
+
+    .header-actions {
+        gap: 17px;
+    }
+
+    .header-search {
+        width: 145px;
+        padding: 9px 10px;
+    }
+
+    .header-search input {
+        font-size: 11px;
+    }
+
+    .site-header .header-nav {
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 13px;
+    }
+
+    .site-header .header-nav a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-header {
+        padding: 14px 4%;
+    }
+
+    .brand {
+        font-size: 21px;
+    }
+
+    .header-search {
+        width: 125px;
+    }
+
+    .site-header .header-nav a {
+        font-size: 10px;
+    }
+}
